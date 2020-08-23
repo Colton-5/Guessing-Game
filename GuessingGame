@@ -1,0 +1,25 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class GuessingGame {
+
+    public static void main(String args[]) {
+
+        Random rand = new Random();
+        int numberGuessed = rand.nextInt(1000);
+        Scanner input = new Scanner(System.in);
+        int guess;
+
+        System.out.println("Guess a number between 1 and 1000: ");
+        guess = input.nextInt();
+
+        if (guess == numberGuessed) {
+            System.out.println("Winner!");
+        }
+        else if (guess < numberGuessed) {
+            System.out.println("Higher!");
+        }
+        else if (guess > numberGuessed)
+            System.out.println("Lower!");
+    }
+}
